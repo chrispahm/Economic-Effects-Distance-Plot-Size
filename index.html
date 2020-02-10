@@ -69,13 +69,14 @@
     line-height: 1.1;
     margin: 0;
     width: 100%;
-    text-align: center;
     color: #fff;
     position: relative;
-    top: 50%;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.2s, opacity 0.2s;
+    top: 80%;
+    text-align: unset;
+    left: 10%;
   }
 
   .description {
@@ -117,10 +118,7 @@
     background-image: url('/assets/pigs.jpg');
     width: 100px;
   }
-  
-  .cs-pigs:hover {
-    width: 1200px;
-  }
+
   .cs-pigs:hover h3 {
     visibility: visible;
     opacity: 1;
@@ -130,14 +128,73 @@
     width: 100px;
   }
   
-  .cs-dairy:hover {
-    width: 1200px;
-  }
   .cs-dairy:hover h3 {
     visibility: visible;
     opacity: 1;
   }
+  /* iPhones */
+  @media only screen and (max-width: 767px) {
+    main {
+      display: block;
+    }
+    .description {
+      padding: 30px;
+    }    
+    .cs-container {
+      width: 100%;
+    }
+    .cs-img {
+      background-position: center;
+      width: 100%;
+    }
+    h3 {
+      visibility: visible;
+      opacity: 1;
+      top: 70%;
+      text-align: unset;
+      left: 10%;
+    }
+  }
+
+  /* iPads */
+  @media only screen and (max-width: 1024px) {
+    .description {
+      max-width: 700px;
+    }
+    
+    .cs-container {
+      display: block;  
+    }
+    
+    .cs-img {
+      box-sizing: border-box;
+      min-width: 100%;
+      height: calc((100vh - 10px) / 3);
+      margin: 0px 0px 10px !important;
+      min-height: unset;
+    }  
+    h3 {
+      visibility: visible;
+      opacity: 1;
+      top: 70%;
+      text-align: unset;
+      left: 10%;
+    }
+
+  }
   
+  /* desktop small */
+  @media only screen and (min-width: 1025px) {
+    .cs-pigs:hover {
+      width: 1200px;
+    }
+    
+    .cs-dairy:hover {
+      width: 1200px;
+    }
+  }
+  
+  /* desktop large */
   @media only screen and (min-width: 1200px) {
     .cs-container {
       width: 800px;
@@ -152,7 +209,15 @@
       width: 1400px;
     }
   }
+  
 
+
+  @media (hover: none) {
+    h3 {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 
 </style>
 
