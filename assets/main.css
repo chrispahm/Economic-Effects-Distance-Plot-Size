@@ -22,6 +22,9 @@ body {
   font-feature-settings: "calt"1, "kern"1, "liga"1;
 }
 
+a {
+  text-decoration: none;
+}
 main {
   display: flex;
   justify-content: space-between;
@@ -93,7 +96,7 @@ h3 {
   margin: 0 0px 0px 5px;
 }
 .cs-arable {
-  background-image: url('assets/arable.jpg');
+  background-image: url('arable.jpg');
   width: 400px;
 }
 .cs-arable:hover h3 {
@@ -101,7 +104,7 @@ h3 {
   opacity: 1;
 }
 .cs-pigs {
-  background-image: url('assets/pigs.jpg');
+  background-image: url('pigs.jpg');
   width: 100px;
 }
 
@@ -110,7 +113,7 @@ h3 {
   opacity: 1;
 }
 .cs-dairy {
-  background-image: url('assets/dairy.jpg');
+  background-image: url('dairy.jpg');
   width: 100px;
 }
 
