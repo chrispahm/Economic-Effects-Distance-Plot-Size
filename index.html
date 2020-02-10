@@ -17,13 +17,14 @@
     font-family: 'Inter var', -system-ui, system-ui, sans-serif;
     /* background: #fff; */
     color: #111;
+    height: 100%;
+    width: 100%;
     font-family: 'Inter', -system-ui, system-ui, sans-serif;
     font-size: 14px;
     letter-spacing: -0.006;
     line-height: 1.5;
     /* width: 100%; */
     margin: 0 auto;
-    padding: 20px;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
@@ -35,6 +36,11 @@
     font-feature-settings: "calt"1, "kern"1, "liga"1;
   }
 
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+  
   h1,
   h2,
   h3,
@@ -57,30 +63,97 @@
   }
 
   h3 {
-    font-size: 16px;
-    letter-spacing: -0.011em;
+    font-size: 50px;
+    letter-spacing: -0.05em;
     font-weight: 700;
-    line-height: 1.35;
+    line-height: 1.1;
     margin: 0;
-    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s;
   }
 
   .description {
     max-width: 500px;
     background: #fff;
     padding: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
     border-radius: 5px;
   }
 
-  /*
-  html {
-    background: url('/assets/background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  .cs-container {
+    float: right;
+    width: 600px;
+    height: 100vh;
+    display: flex;
   }
-  */
+  
+  .cs-img {
+    transition: width 0.5s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    margin: 0 5px;
+  }
+  
+  .cs-img:last-child {
+    margin: 0 0px 0px 5px;
+  }
+  .cs-arable {
+    background-image: url('/assets/arable.jpg');
+    width: 400px;
+  }
+  .cs-arable:hover h3 {
+    visibility: visible;
+    opacity: 1;
+  }
+  .cs-pigs {
+    background-image: url('/assets/pigs.jpg');
+    width: 100px;
+  }
+  
+  .cs-pigs:hover {
+    width: 1200px;
+  }
+  .cs-pigs:hover h3 {
+    visibility: visible;
+    opacity: 1;
+  }
+  .cs-dairy {
+    background-image: url('/assets/dairy.jpg');
+    width: 100px;
+  }
+  
+  .cs-dairy:hover {
+    width: 1200px;
+  }
+  .cs-dairy:hover h3 {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .cs-container {
+      width: 800px;
+    }
+    .cs-pigs:hover {
+      width: 1400px;
+    }
+    .cs-arable {
+      width: 600px;
+    }
+    .cs-dairy:hover {
+      width: 1400px;
+    }
+  }
+
+
 </style>
 
 <body>
@@ -91,11 +164,14 @@
         aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
     <div class="cs-container">
-      <div class="cs-arable">
-        
+      <div class="cs-arable cs-img">
+        <h3>Arable</h3>
       </div>
-      <div class="cs-pigs">
-        
+      <div class="cs-pigs cs-img">
+        <h3>Pigs</h3>
+      </div>
+      <div class="cs-dairy cs-img">
+        <h3>Dairy</h3>
       </div>
     </div>
   </main>
