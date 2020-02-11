@@ -23,6 +23,7 @@ body {
 }
 
 a {
+  display: block;
   text-decoration: none;
 }
 main {
@@ -121,6 +122,14 @@ h3 {
   visibility: visible;
   opacity: 1;
 }
+
+.iframe-container {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* iPhones */
 @media only screen and (max-width: 767px) {
   main {
@@ -142,6 +151,10 @@ h3 {
     top: 70%;
     text-align: unset;
     left: 10%;
+  }
+  
+  .iframe-container {
+    margin-top: 0px;
   }
 }
 
@@ -206,11 +219,4 @@ h3 {
     visibility: visible;
     opacity: 1;
   }
-}
-
-.iframe-container {
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
