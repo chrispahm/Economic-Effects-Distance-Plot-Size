@@ -8,9 +8,10 @@
   <body>
     <main style="justify-content: unset; max-width: 1200px; margin-left: auto; margin-right: auto;">
       <div class="description">
-        <h1>The case of an arable farm</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1>The case of a pig farm</h1>
+        <p>The crop production costs of conventional farming are higher compared to organic farming. At the same time, despite a considerable reduction in herd size, total labor requirements significantly increase with the conversion. This mostly reflects higher labor demands per animals place in organic production. The gap within each level is due to the choice of the profit maximazing mechanization level.  At the gap the mechanization level changes from 102 kW to 200 kW.
+          <br>
+          With increasing distances, crop production costs and total labor requirements are increasing, followed by an decrease in profit. Increasing plot sizes have a opposite effet: Costs and labor requirements decrease resulting in an increase in profit. Thereby, the effects of plot sizes and farm-field distances are higher in conventional systems. This is particularly apparent from the gradient of crop production costs and profit.</p>
       </div>
       <div class="iframe-container">
         <div class="row selectors">
@@ -45,13 +46,13 @@
         plotFrame.style.visibility = 'hidden'
         switch (indicator) {
           case 'profit':
-            plotFrame.src = './plotly/Arable Farm, Profit per Hectare.html'
+            plotFrame.src = './plotly/Pig Fattening Farm, Profit per Hectare.html'
             break;
           case 'labour':
-            plotFrame.src = './plotly/Arable Farm, Total Labour Requirements per Hectare.html'
+            plotFrame.src = './plotly/Pig Fattening Farm, Total Labour Requirements per Hectare.html'
             break;
           case 'costs':
-            plotFrame.src = './plotly/Arable Farm, Crop Production Costs per Hectare.html'
+            plotFrame.src = './plotly/Pig Fattening Farm, Crop Production Costs per Hectare.html'
             break;
           default:
             console.log('MADE AT ILR UNI BONN WITH LOVE');
