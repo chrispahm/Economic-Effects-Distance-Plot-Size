@@ -355,9 +355,9 @@ button:active {
 }
 @keyframes lds-grid {
   0%, 100% {
-    opacity: 0.7;
+    opacity: 0.6;
   }
   50% {
-    opacity: 0.3;
+    opacity: 0.1;
   }
 }
