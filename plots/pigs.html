@@ -37,12 +37,12 @@
       var plotFrame = document.getElementById("plotFrame")
       
       plotFrame.addEventListener('load', () => {
-        loading.style.visibility = 'hidden'
+        loading.style.display = 'none'
         plotFrame.style.visibility = 'visible'
       })
       
       function changeSource(indicator) {
-        loading.style.visibility = 'visible'
+        loading.style.display = 'block'
         plotFrame.style.visibility = 'hidden'
         switch (indicator) {
           case 'profit':

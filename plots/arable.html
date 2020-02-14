@@ -9,8 +9,9 @@
     <main style="justify-content: unset; max-width: 1200px; margin-left: auto; margin-right: auto;">
       <div class="description">
         <h1>The case of an arable farm</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>For the arable farm, the conversion to organic farming is a profit maximazing choice. The crop production costs of conventional and organic farming are similar with organic farming facing slightly lower costs. The organic farm benefits from lower costs due to differences in weed and pest control as well as fertilization. However, after conversion, there is a considerably high increase in labor requirements which mostly reflects the uptake of livestock and pumpkin production. The gap within each level is due to the choice of the profit maximazing mechanization level.  At the gap the mechanization level changes from 102 kW to 200 kW.
+          <br>
+With increasing distances, crop production costs and total labor requirements are increasing, followed by an decrease in profit. Increasing plot sizes have a opposite effet: Costs and labor requirements decrease resulting in an increase in profit. The effects of plot sizes and farm-field distances are slightly higher in conventional systems, however hardly visible in the graphs.</p>
       </div>
       <div class="iframe-container">
         <div class="row selectors">
@@ -36,12 +37,12 @@
       var plotFrame = document.getElementById("plotFrame")
       
       plotFrame.addEventListener('load', () => {
-        loading.style.visibility = 'hidden'
+        loading.style.display = 'none'
         plotFrame.style.visibility = 'visible'
       })
       
       function changeSource(indicator) {
-        loading.style.visibility = 'visible'
+        loading.style.block = 'block'
         plotFrame.style.visibility = 'hidden'
         switch (indicator) {
           case 'profit':
