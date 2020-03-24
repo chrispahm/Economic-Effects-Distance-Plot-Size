@@ -27,33 +27,33 @@ With increasing distances, crop production costs and total labor requirements ar
         <div class="row selectors">
           <div>
             <button type="button" name="button" onclick="changeSource('profit')">Profit [€/ha]</button>
-            <button type="button" name="button" onclick="changeSource('labour')">Crop production costs [€/ha]</button>
-            <button type="button" name="button" onclick="changeSource('costs')">Total labour reuirements [h/ha]</button>
+            <button type="button" name="button" onclick="changeSource('labour')">Total labor requirements [h/ha]</button>
+            <button type="button" name="button" onclick="changeSource('costs')">Crop production costs [€/ha]</button>
           </div>
         </div>
         <hr>
         <div class="row">
           <div id="loading" class="loading">
-            <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>  
+            <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             <div style="text-align: center;">
               Loading...
             </div>
           </div>
         </div>
         <div class="row">
-          <iframe id="plotFrame" class="plotFrame" width="800" height="700" frameborder="0" scrolling="no" src="./plotly/Arable Farm, Profit per Hectare.html"></iframe>          
+          <iframe id="plotFrame" class="plotFrame" width="800" height="700" frameborder="0" scrolling="no" src="./plotly/Arable Farm, Profit per Hectare.html"></iframe>
         </div>
       </div>
     </main>
     <script type="text/javascript">
       var loading = document.getElementById("loading")
       var plotFrame = document.getElementById("plotFrame")
-      
+
       plotFrame.addEventListener('load', () => {
         loading.style.display = 'none'
         plotFrame.style.visibility = 'visible'
       })
-      
+
       function changeSource(indicator) {
         loading.style.display = 'block'
         plotFrame.style.visibility = 'hidden'
